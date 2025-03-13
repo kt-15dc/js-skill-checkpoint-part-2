@@ -7,3 +7,10 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+
+const calculateScore = (studentList) => {
+  let result = "Total score is " + studentList.filter(student => student.score>50).map(student=>student.score*110/100).reduce((acc,num)=> acc+num,0);
+  return result;
+}
+
+console.log(calculateScore(students));
